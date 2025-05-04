@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A25D325A2DBC40E500326210 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = A25D32592DBC40E500326210 /* Auth */; };
+		A25D325C2DBC40E500326210 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = A25D325B2DBC40E500326210 /* Functions */; };
+		A25D325E2DBC40E500326210 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = A25D325D2DBC40E500326210 /* PostgREST */; };
+		A25D32602DBC40E500326210 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = A25D325F2DBC40E500326210 /* Realtime */; };
+		A25D32622DBC40E500326210 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = A25D32612DBC40E500326210 /* Storage */; };
+		A25D32642DBC40E500326210 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = A25D32632DBC40E500326210 /* Supabase */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A23146512DB2079E004AA59C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A231463B2DB2079D004AA59C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A23146422DB2079D004AA59C;
+			remoteInfo = "wedding-checklist";
+		};
+		A231465B2DB2079E004AA59C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A231463B2DB2079D004AA59C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A23146422DB2079D004AA59C;
+			remoteInfo = "wedding-checklist";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A23146432DB2079D004AA59C /* wedding-checklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wedding-checklist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A23146502DB2079E004AA59C /* wedding-checklistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wedding-checklistTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A231465A2DB2079E004AA59C /* wedding-checklistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wedding-checklistUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A23146452DB2079D004AA59C /* wedding-checklist */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "wedding-checklist";
+			sourceTree = "<group>";
+		};
+		A23146532DB2079E004AA59C /* wedding-checklistTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "wedding-checklistTests";
+			sourceTree = "<group>";
+		};
+		A231465D2DB2079E004AA59C /* wedding-checklistUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "wedding-checklistUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A23146402DB2079D004AA59C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A25D325E2DBC40E500326210 /* PostgREST in Frameworks */,
+				A25D325C2DBC40E500326210 /* Functions in Frameworks */,
+				A25D32642DBC40E500326210 /* Supabase in Frameworks */,
+				A25D325A2DBC40E500326210 /* Auth in Frameworks */,
+				A25D32622DBC40E500326210 /* Storage in Frameworks */,
+				A25D32602DBC40E500326210 /* Realtime in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A231464D2DB2079E004AA59C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A23146572DB2079E004AA59C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A231463A2DB2079D004AA59C = {
+			isa = PBXGroup;
+			children = (
+				A23146452DB2079D004AA59C /* wedding-checklist */,
+				A23146532DB2079E004AA59C /* wedding-checklistTests */,
+				A231465D2DB2079E004AA59C /* wedding-checklistUITests */,
+				A23146442DB2079D004AA59C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A23146442DB2079D004AA59C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A23146432DB2079D004AA59C /* wedding-checklist.app */,
+				A23146502DB2079E004AA59C /* wedding-checklistTests.xctest */,
+				A231465A2DB2079E004AA59C /* wedding-checklistUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A23146422DB2079D004AA59C /* wedding-checklist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A23146642DB2079E004AA59C /* Build configuration list for PBXNativeTarget "wedding-checklist" */;
+			buildPhases = (
+				A231463F2DB2079D004AA59C /* Sources */,
+				A23146402DB2079D004AA59C /* Frameworks */,
+				A23146412DB2079D004AA59C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A23146452DB2079D004AA59C /* wedding-checklist */,
+			);
+			name = "wedding-checklist";
+			packageProductDependencies = (
+				A25D32592DBC40E500326210 /* Auth */,
+				A25D325B2DBC40E500326210 /* Functions */,
+				A25D325D2DBC40E500326210 /* PostgREST */,
+				A25D325F2DBC40E500326210 /* Realtime */,
+				A25D32612DBC40E500326210 /* Storage */,
+				A25D32632DBC40E500326210 /* Supabase */,
+			);
+			productName = "wedding-checklist";
+			productReference = A23146432DB2079D004AA59C /* wedding-checklist.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A231464F2DB2079E004AA59C /* wedding-checklistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A23146672DB2079E004AA59C /* Build configuration list for PBXNativeTarget "wedding-checklistTests" */;
+			buildPhases = (
+				A231464C2DB2079E004AA59C /* Sources */,
+				A231464D2DB2079E004AA59C /* Frameworks */,
+				A231464E2DB2079E004AA59C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A23146522DB2079E004AA59C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A23146532DB2079E004AA59C /* wedding-checklistTests */,
+			);
+			name = "wedding-checklistTests";
+			packageProductDependencies = (
+			);
+			productName = "wedding-checklistTests";
+			productReference = A23146502DB2079E004AA59C /* wedding-checklistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A23146592DB2079E004AA59C /* wedding-checklistUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A231466A2DB2079E004AA59C /* Build configuration list for PBXNativeTarget "wedding-checklistUITests" */;
+			buildPhases = (
+				A23146562DB2079E004AA59C /* Sources */,
+				A23146572DB2079E004AA59C /* Frameworks */,
+				A23146582DB2079E004AA59C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A231465C2DB2079E004AA59C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A231465D2DB2079E004AA59C /* wedding-checklistUITests */,
+			);
+			name = "wedding-checklistUITests";
+			packageProductDependencies = (
+			);
+			productName = "wedding-checklistUITests";
+			productReference = A231465A2DB2079E004AA59C /* wedding-checklistUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A231463B2DB2079D004AA59C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					A23146422DB2079D004AA59C = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					A231464F2DB2079E004AA59C = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A23146422DB2079D004AA59C;
+					};
+					A23146592DB2079E004AA59C = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A23146422DB2079D004AA59C;
+					};
+				};
+			};
+			buildConfigurationList = A231463E2DB2079D004AA59C /* Build configuration list for PBXProject "wedding-checklist" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A231463A2DB2079D004AA59C;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A23146442DB2079D004AA59C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A23146422DB2079D004AA59C /* wedding-checklist */,
+				A231464F2DB2079E004AA59C /* wedding-checklistTests */,
+				A23146592DB2079E004AA59C /* wedding-checklistUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A23146412DB2079D004AA59C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A231464E2DB2079E004AA59C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A23146582DB2079E004AA59C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A231463F2DB2079D004AA59C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A231464C2DB2079E004AA59C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A23146562DB2079E004AA59C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A23146522DB2079E004AA59C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A23146422DB2079D004AA59C /* wedding-checklist */;
+			targetProxy = A23146512DB2079E004AA59C /* PBXContainerItemProxy */;
+		};
+		A231465C2DB2079E004AA59C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A23146422DB2079D004AA59C /* wedding-checklist */;
+			targetProxy = A231465B2DB2079E004AA59C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A23146622DB2079E004AA59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = TX86F6EBCJ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A23146632DB2079E004AA59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = TX86F6EBCJ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A23146652DB2079E004AA59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TX86F6EBCJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shillwil.wedding-checklist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A23146662DB2079E004AA59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TX86F6EBCJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shillwil.wedding-checklist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A23146682DB2079E004AA59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TX86F6EBCJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shillwil.wedding-checklistTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wedding-checklist.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/wedding-checklist";
+			};
+			name = Debug;
+		};
+		A23146692DB2079E004AA59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TX86F6EBCJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shillwil.wedding-checklistTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wedding-checklist.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/wedding-checklist";
+			};
+			name = Release;
+		};
+		A231466B2DB2079E004AA59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TX86F6EBCJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shillwil.wedding-checklistUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "wedding-checklist";
+			};
+			name = Debug;
+		};
+		A231466C2DB2079E004AA59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TX86F6EBCJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shillwil.wedding-checklistUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "wedding-checklist";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A231463E2DB2079D004AA59C /* Build configuration list for PBXProject "wedding-checklist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A23146622DB2079E004AA59C /* Debug */,
+				A23146632DB2079E004AA59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A23146642DB2079E004AA59C /* Build configuration list for PBXNativeTarget "wedding-checklist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A23146652DB2079E004AA59C /* Debug */,
+				A23146662DB2079E004AA59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A23146672DB2079E004AA59C /* Build configuration list for PBXNativeTarget "wedding-checklistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A23146682DB2079E004AA59C /* Debug */,
+				A23146692DB2079E004AA59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A231466A2DB2079E004AA59C /* Build configuration list for PBXNativeTarget "wedding-checklistUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A231466B2DB2079E004AA59C /* Debug */,
+				A231466C2DB2079E004AA59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A25D32592DBC40E500326210 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		A25D325B2DBC40E500326210 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		A25D325D2DBC40E500326210 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		A25D325F2DBC40E500326210 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		A25D32612DBC40E500326210 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		A25D32632DBC40E500326210 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A231463B2DB2079D004AA59C /* Project object */;
+}
