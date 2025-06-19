@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A25D325A2DBC40E500326210 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = A25D32592DBC40E500326210 /* Auth */; };
-		A25D325C2DBC40E500326210 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = A25D325B2DBC40E500326210 /* Functions */; };
-		A25D325E2DBC40E500326210 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = A25D325D2DBC40E500326210 /* PostgREST */; };
-		A25D32602DBC40E500326210 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = A25D325F2DBC40E500326210 /* Realtime */; };
-		A25D32622DBC40E500326210 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = A25D32612DBC40E500326210 /* Storage */; };
-		A25D32642DBC40E500326210 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = A25D32632DBC40E500326210 /* Supabase */; };
+		A297943F2DFE17E400229693 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A297943E2DFE17E400229693 /* FirebaseAuth */; };
+		A29794412DFE17E400229693 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = A29794402DFE17E400229693 /* FirebaseAuthCombine-Community */; };
+		A29794432DFE17E400229693 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = A29794422DFE17E400229693 /* FirebaseCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,12 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25D325E2DBC40E500326210 /* PostgREST in Frameworks */,
-				A25D325C2DBC40E500326210 /* Functions in Frameworks */,
-				A25D32642DBC40E500326210 /* Supabase in Frameworks */,
-				A25D325A2DBC40E500326210 /* Auth in Frameworks */,
-				A25D32622DBC40E500326210 /* Storage in Frameworks */,
-				A25D32602DBC40E500326210 /* Realtime in Frameworks */,
+				A297943F2DFE17E400229693 /* FirebaseAuth in Frameworks */,
+				A29794432DFE17E400229693 /* FirebaseCore in Frameworks */,
+				A29794412DFE17E400229693 /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,12 +121,9 @@
 			);
 			name = "wedding-checklist";
 			packageProductDependencies = (
-				A25D32592DBC40E500326210 /* Auth */,
-				A25D325B2DBC40E500326210 /* Functions */,
-				A25D325D2DBC40E500326210 /* PostgREST */,
-				A25D325F2DBC40E500326210 /* Realtime */,
-				A25D32612DBC40E500326210 /* Storage */,
-				A25D32632DBC40E500326210 /* Supabase */,
+				A297943E2DFE17E400229693 /* FirebaseAuth */,
+				A29794402DFE17E400229693 /* FirebaseAuthCombine-Community */,
+				A29794422DFE17E400229693 /* FirebaseCore */,
 			);
 			productName = "wedding-checklist";
 			productReference = A23146432DB2079D004AA59C /* wedding-checklist.app */;
@@ -217,7 +208,7 @@
 			mainGroup = A231463A2DB2079D004AA59C;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				A297943D2DFE17E400229693 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A23146442DB2079D004AA59C /* Products */;
@@ -584,46 +575,31 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+		A297943D2DFE17E400229693 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.5.1;
+				minimumVersion = 11.14.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A25D32592DBC40E500326210 /* Auth */ = {
+		A297943E2DFE17E400229693 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Auth;
+			package = A297943D2DFE17E400229693 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
-		A25D325B2DBC40E500326210 /* Functions */ = {
+		A29794402DFE17E400229693 /* FirebaseAuthCombine-Community */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Functions;
+			package = A297943D2DFE17E400229693 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
 		};
-		A25D325D2DBC40E500326210 /* PostgREST */ = {
+		A29794422DFE17E400229693 /* FirebaseCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = PostgREST;
-		};
-		A25D325F2DBC40E500326210 /* Realtime */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Realtime;
-		};
-		A25D32612DBC40E500326210 /* Storage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Storage;
-		};
-		A25D32632DBC40E500326210 /* Supabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A25D32582DBC40E500326210 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = Supabase;
+			package = A297943D2DFE17E400229693 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

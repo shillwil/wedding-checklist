@@ -9,7 +9,7 @@ import SwiftUI
 import Supabase
 
 struct ChecklistView: View {
-    @StateObject var viewModel = ChecklistViewModel(service: ChecklistService(supabaseClient: .init(supabaseURL: SupabaseConfig.projectURL, supabaseKey: SupabaseConfig.apiKey)))
+    @StateObject var viewModel = ChecklistViewModel(service: ChecklistService())
     @State private var searchText = ""
     
     var body: some View {

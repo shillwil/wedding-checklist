@@ -27,29 +27,6 @@ class ChecklistViewModel: ObservableObject {
         }
         
         isLoading = true
-        
-        do {
-            let response = try await service.fetchItems(
-                page: currentPage,
-                category: selectedCategory,
-                searchTerm: searchTerm.isEmpty ? nil : searchTerm
-            )
-            
-            await MainActor.run {
-                if resetPage {
-                    self.items = response.items
-                } else {
-                    self.items = response.items
-                }
-                self.totalPages = response.totalPages
-                self.isLoading = false
-            }
-        } catch {
-            print("Error loading items: \(error)")
-            await MainActor.run {
-                self.isLoading = false
-            }
-        }
     }
     
     func loadNextPage() async {
