@@ -76,13 +76,8 @@
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "SUPABASE_URL"
-            value = "https://kyyxdxoctwolfxyflumc.supabase.co"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "SUPABASE_ANON_KEY"
-            value = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt5eXhkeG9jdHdvbGZ4eWZsdW1jIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ5OTE4OTgsImV4cCI6MjA2MDU2Nzg5OH0.BQx1VoF_-ZnTbVT9iTuZ5UzpP_XEHhAucYTDIuZfNrs"
+            key = "API_BASE_URL"
+            value = "checklist-backend-production-d50b.up.railway.app"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
