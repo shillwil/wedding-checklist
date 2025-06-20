@@ -8,5 +8,13 @@
 import Foundation
 
 enum Config {
-    static let apiBaseURL = Bundle.main.object(forInfoDictionaryKey: "API_BASE_URL") as! String
+    static let apiBaseURL: String = {
+            // This reads from Xcode scheme environment variables
+            if let urlString = ProcessInfo.processInfo.environment["API_BASE_URL"] {
+                return urlString
+            }
+            
+            // Fallback for production/release builds
+            return ""
+        }()
 }

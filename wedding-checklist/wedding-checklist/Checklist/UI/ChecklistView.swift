@@ -6,106 +6,132 @@
 //
 
 import SwiftUI
-import Supabase
 
 struct ChecklistView: View {
-    @StateObject var viewModel = ChecklistViewModel(service: ChecklistService())
+    @EnvironmentObject var authService: AuthService
+    @StateObject private var viewModel: ChecklistViewModel
+    @State private var showAddItem = false
     @State private var searchText = ""
+    
+    init(authService: AuthService) {
+        let service = ChecklistService(authService: authService)
+        _viewModel = StateObject(wrappedValue: ChecklistViewModel(service: service))
+    }
     
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 0) {
                 // Search bar
-                TextField("Search checklist", text: $searchText)
-                    .padding(7)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                    .padding(.horizontal)
-                    .onChange(of: searchText) { newValue in
-                        viewModel.searchTerm = newValue
-                        Task {
-                            await viewModel.loadItems(resetPage: true)
-                        }
+                SearchBar(text: $searchText)
+                    .onChange(of: searchText) { _, newValue in
+                        viewModel.searchItems(newValue)
                     }
                 
-                // Category filters (horizontal scrolling)
+                // Category filters
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        CategoryButton(title: "All", isSelected: viewModel.selectedCategory == nil) {
+                    HStack(spacing: 12) {
+                        CategoryButton(
+                            title: "All",
+                            isSelected: viewModel.selectedCategory == nil
+                        ) {
                             viewModel.selectedCategory = nil
-                            Task {
-                                await viewModel.loadItems(resetPage: true)
-                            }
+                            Task { await viewModel.loadItems(resetPage: true) }
                         }
                         
-                        // Add your category buttons here
-                        // Example:
-                        CategoryButton(title: "Venue", isSelected: viewModel.selectedCategory == "Venue") {
-                            viewModel.selectedCategory = "Venue"
-                            Task {
-                                await viewModel.loadItems(resetPage: true)
+                        ForEach(categories, id: \.self) { category in
+                            CategoryButton(
+                                title: category,
+                                isSelected: viewModel.selectedCategory == category
+                            ) {
+                                viewModel.selectedCategory = category
+                                Task { await viewModel.loadItems(resetPage: true) }
                             }
                         }
-                        // More categories...
                     }
                     .padding(.horizontal)
+                    .padding(.vertical, 8)
                 }
                 
                 // Checklist items
-                List {
-                    ForEach(viewModel.items) { item in
-                        ChecklistItemRow(item: item)
-                    }
-                    
-                    // Loading indicator for next page
-                    if viewModel.isLoading {
-                        HStack {
-                            Spacer()
-                            ProgressView()
-                            Spacer()
+                if viewModel.isLoading && viewModel.items.isEmpty {
+                    Spacer()
+                    ProgressView("Loading...")
+                    Spacer()
+                } else if viewModel.items.isEmpty {
+                    EmptyStateView()
+                } else {
+                    List {
+                        ForEach(viewModel.items) { item in
+                            ChecklistItemRow(
+                                item: item,
+                                onToggle: {
+                                    Task { await viewModel.toggleItemCompletion(item) }
+                                },
+                                onDelete: {
+                                    Task { await viewModel.deleteItem(item) }
+                                }
+                            )
                         }
-                    } else if viewModel.currentPage < viewModel.totalPages {
-                        Button("Load More") {
-                            Task {
-                                await viewModel.loadNextPage()
+                        
+                        // Load more button
+                        if viewModel.currentPage < viewModel.totalPages {
+                            HStack {
+                                Spacer()
+                                if viewModel.isLoading {
+                                    ProgressView()
+                                } else {
+                                    Button("Load More") {
+                                        Task { await viewModel.loadNextPage() }
+                                    }
+                                }
+                                Spacer()
                             }
+                            .padding()
                         }
-                        .frame(maxWidth: .infinity, alignment: .center)
+                    }
+                    .listStyle(PlainListStyle())
+                    .refreshable {
+                        await viewModel.refresh()
+                    }
+                }
+            }
+            .navigationTitle("Wedding Checklist")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { showAddItem = true }) {
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundColor(.pink)
                     }
                 }
                 
-                // Pagination controls
-                HStack {
-                    Button(action: {
-                        Task {
-                            await viewModel.loadPreviousPage()
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Menu {
+                        Button(action: {
+                            try? authService.signOut()
+                        }) {
+                            Label("Sign Out", systemImage: "arrow.right.square")
                         }
-                    }) {
-                        Image(systemName: "chevron.left")
+                    } label: {
+                        Image(systemName: "person.circle")
+                            .foregroundColor(.pink)
                     }
-                    .disabled(viewModel.currentPage == 1)
-                    
-                    Text("Page \(viewModel.currentPage) of \(viewModel.totalPages)")
-                    
-                    Button(action: {
-                        Task {
-                            await viewModel.loadNextPage()
-                        }
-                    }) {
-                        Image(systemName: "chevron.right")
-                    }
-                    .disabled(viewModel.currentPage == viewModel.totalPages)
                 }
-                .padding()
             }
-            .navigationTitle("Wedding Checklist")
-            .onAppear {
-                Task {
-                    await viewModel.loadItems()
-                }
+            .sheet(isPresented: $showAddItem) {
+                AddItemView(viewModel: viewModel)
+            }
+            .alert("Error", isPresented: $viewModel.showError) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text(viewModel.errorMessage ?? "An error occurred")
             }
         }
+        .task {
+            await viewModel.loadItems()
+        }
     }
+    
+    private let categories = ["Venue", "Catering", "Photography", "Flowers", "Music", "Attire", "Guests", "Other"]
 }
 
 //#Preview {
