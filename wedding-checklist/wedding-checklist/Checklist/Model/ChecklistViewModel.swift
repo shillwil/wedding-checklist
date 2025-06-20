@@ -31,8 +31,10 @@ class ChecklistViewModel: ObservableObject {
             items = []
         }
         
-        isLoading = true
-        errorMessage = nil
+        await MainActor.run {
+            isLoading = true
+            errorMessage = nil
+        }
         
         do {
             let response = try await service.fetchItems(
